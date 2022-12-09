@@ -56,9 +56,9 @@ class RenderTextFormat
      */
     private function escapeLabelValue($v): string
     {
-        $v = str_replace("\\", "\\\\", $v);
-        $v = str_replace("\n", "\\n", $v);
-        $v = str_replace("\"", "\\\"", $v);
+        $v = str_replace("\\", "\\\\", $v ?? '');
+        $v = str_replace("\n", "\\n", $v ?? '');
+        $v = str_replace("\"", "\\\"", $v ?? '');
         return $v;
     }
 }
